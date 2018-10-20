@@ -10,6 +10,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+feign:
+  hystrix:
+    enabled: false
 logging:
   level:
     org.springframework.security: DEBUG
