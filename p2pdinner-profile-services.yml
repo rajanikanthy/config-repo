@@ -30,7 +30,8 @@ logging:
 spring:
   profiles: kube
   datasource:
-    url: jdbc:postgresql://google/profiledb?socketFactory=com.google.cloud.sql.postgres.SocketFactory&cloudSqlInstance=glowing-vehicle-220016:us-central1:profile-services-datastore
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://127.0.0.1:5433/profilesdb
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
   jpa:
