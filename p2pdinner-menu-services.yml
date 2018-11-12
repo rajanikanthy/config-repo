@@ -1,5 +1,6 @@
-server:
-  port: ${PORT:${SERVER_PORT:0}}
+feign:
+  hystrix:
+    enabled: false
 ---      
 spring:
   profiles: development
@@ -10,9 +11,16 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-feign:
-  hystrix:
-    enabled: false
 logging:
   level:
     org.springframework.security: DEBUG
+---
+spring:
+  profiles: kube
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5433/catalogdb
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  redis:
+    host: 10.0.0.3
+    port: 6379
