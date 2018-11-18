@@ -3,8 +3,10 @@ eureka:
     fetchRegistry: true
 zuul:
   routes:
-    path: /p2pdinner/profiles/**
-    service-id: P2PDINNER-PROFILE-SERVICES
+    profileService:
+      path: /p2pdinner/profiles/**
+      serviceId: P2PDINNER-PROFILE-SERVICES
+      stripPrefix: false
 ---      
 spring:
   profiles: development
