@@ -5,7 +5,6 @@ zuul:
   routes:
     path: /p2pdinner/profiles/**
     service-id: P2PDINNER-PROFILE-SERVICES
-    strip-prefix: false
 ---      
 spring:
   profiles: development
