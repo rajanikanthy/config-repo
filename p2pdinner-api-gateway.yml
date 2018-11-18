@@ -1,3 +1,6 @@
+eureka:
+  client:
+    fetchRegistry: true
 ---      
 spring:
   profiles: development
