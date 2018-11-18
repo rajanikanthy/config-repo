@@ -1,6 +1,9 @@
 eureka:
   client:
-    fetchRegistry: true
+    fetchRegistry: false
+ribbon:
+  eureka:
+    enabled: false
 zuul:
   routes:
     profileService:
