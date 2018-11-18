@@ -1,9 +1,11 @@
 zuul:
   routes:
     profileService:
+      path: /api/profiles/**
       serviceId: P2PDINNER-PROFILE-SERVICES
       stripPrefix: false
     catalogService:
+      path: /api/catalog/**
       serviceId: P2PDINNER-MENU-SERVICES
       stripPrefix: false
 ---      
