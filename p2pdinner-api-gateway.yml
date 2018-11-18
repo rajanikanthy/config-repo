@@ -4,8 +4,8 @@ eureka:
 zuul:
   routes:
     profileService:
-      path: /p2pdinner/profiles/**
-      url: http://35.192.47.56:80/
+      path: /profiles/**
+      url: http://35.192.47.56:80/api/profiles
       stripPrefix: false
 ---      
 spring:
