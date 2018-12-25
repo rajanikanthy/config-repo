@@ -5,9 +5,9 @@ feign:
 spring:
   profiles: development
   datasource:
-    url: jdbc:postgresql://localhost:5432/catalogdb
-    username: rajaniy
-    password: 1800$heemu
+    url: ${JDBC_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
