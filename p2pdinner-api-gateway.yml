@@ -11,5 +11,14 @@ zuul:
 ---      
 spring:
   profiles: development
+  cloud:
+    config:
+      uri: http://config-service:8888/
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-service:8010/eureka
+  instance:
+    preferIpAddress: true
 
 
