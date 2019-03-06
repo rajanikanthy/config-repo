@@ -11,6 +11,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  rabbitmq:
+    host: ${RABBITMQ_HOST}
 logging:
   level:
     org.springframework.security: DEBUG
