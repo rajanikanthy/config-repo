@@ -22,8 +22,8 @@ spring:
     mongodb:
       authenticaiton-database: admin
       database: listings
-      host: ${MONGODB_HOST}
-      port: ${MONGODB_PORT}
+      host: document-service
+      port: 27017
   rabbitmq:
     host: message-broker
 logging:
