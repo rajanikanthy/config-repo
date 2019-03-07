@@ -7,11 +7,14 @@ spring:
       database: listings
       host: localhost
       port: 27017
-  rabbitmq:
-    host: message-broker
 logging:
   level:
     org.springframework.security: DEBUG
+grpc:
+  port: 6565
+eureka:
+  instance:
+    nonSecurePort: ${grpc.port}
 ---      
 spring:
   profiles: development
