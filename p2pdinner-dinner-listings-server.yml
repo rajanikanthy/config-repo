@@ -20,7 +20,7 @@ spring:
   profiles: development
   data:
     mongodb:
-      authenticaiton-database: admin
+      authentication-database: admin
       database: listings
       host: document-service
       port: 27017

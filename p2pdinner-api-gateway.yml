@@ -21,5 +21,12 @@ eureka:
       defaultZone: http://eureka-service:8010/eureka
   instance:
     preferIpAddress: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
 
 
