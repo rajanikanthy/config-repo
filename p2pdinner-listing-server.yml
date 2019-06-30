@@ -1,3 +1,11 @@
+logging:
+  level:
+    org.springframework.security: DEBUG
+grpc:
+  port: 6565
+eureka:
+  instance:
+    nonSecurePort: ${grpc.port}
 ---
 spring:
   profiles: local
@@ -7,14 +15,6 @@ spring:
       database: listings
       host: localhost
       port: 27017
-logging:
-  level:
-    org.springframework.security: DEBUG
-grpc:
-  port: 6565
-eureka:
-  instance:
-    nonSecurePort: ${grpc.port}
 ---      
 spring:
   profiles: development
