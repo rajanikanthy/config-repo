@@ -22,7 +22,7 @@ spring:
     mongodb:
       authentication-database: admin
       database: listings
-      host: document-service
+      host: document-server
       port: 27017
   rabbitmq:
     host: message-broker
