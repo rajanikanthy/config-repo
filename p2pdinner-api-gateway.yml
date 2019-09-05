@@ -28,5 +28,25 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 30000
+---      
+spring:
+  profiles: local
+  cloud:
+    config:
+      uri: http://localhost:8888/
+      fail-fast: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka
+  instance:
+    preferIpAddress: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
 
 
