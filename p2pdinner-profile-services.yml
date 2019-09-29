@@ -1,5 +1,33 @@
 ---      
 spring:
+  profiles: local
+  datasource:
+    url: ${JDBC_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+logging:
+  level:
+    org.springframework.security: DEBUG
+server:
+  port: ${PORT:${SERVER_PORT:0}}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka
+  instance:
+    preferIpAddress: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+---      
+spring:
   profiles: development
   datasource:
     url: ${JDBC_URL}
