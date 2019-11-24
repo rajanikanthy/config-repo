@@ -26,6 +26,11 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 30000
+app:
+  dinner:
+    listing:
+      grpc:
+        url: localhost
 ---      
 spring:
   profiles: development
