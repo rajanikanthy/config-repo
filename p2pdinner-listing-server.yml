@@ -1,6 +1,7 @@
 logging:
   level:
     org.springframework.security: DEBUG
+    org.springframework.data.mongodb.core: DEBUG
 grpc:
   port: 6565
 eureka:
