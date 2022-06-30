@@ -36,6 +36,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-service:8010/eureka
 logging:
   level:
     org.springframework.security: DEBUG
